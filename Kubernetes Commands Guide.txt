@@ -1,0 +1,25 @@
+Some useful commands
+3 docker build -t jasmin/posts:0.0.1 .
+9 kubectl apply -f .\posts.yaml
+10 kubectl get pods
+12 kubectl exec -it posts -- sh
+13 kubectl logs posts
+14 kubectl delete pod posts
+19 kubectl describe pods posts
+20 kubectl delete deployment posts-depl  
+
+
+pushing the image to the docker hub:
+1: login first: "docker login" command
+2. Go to https://hub.docker.com/
+3. Sign in
+4. Create a repository, make sure it's set to public to be able to pull
+5. after creating the repo, you can now proceed to tagging the local image you have to push it: use the command below:
+
+docker tag jasmin/posts:0.0.8 innkjsmn/posts:0.0.8
+
+jasmin/posts:0.0.8 => is the docker image i have locally
+innkjsmn/posts:0.0.8 => is what I am pushing to the docker hub
+
+- make sure to re-check the image you have in the yaml file because what it's getting is not anymore locally but from the dockerhub
+Note: you can put whatever version you like, latest is better for pulling for future use.
