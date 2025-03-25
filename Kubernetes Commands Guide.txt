@@ -9,6 +9,18 @@ Some useful commands
 20 kubectl delete deployment posts-depl  
 
 
+apiVersions for:
+Pod: v1
+Service: v1
+ConfigMap: v1
+Deployments: apps/v1
+StatefulSet: apps/v1
+ReplicaSet: apps/v1
+DaemonSet: apps/v1
+CronJob: batch/v1
+
+
+
 pushing the image to the docker hub:
 1: login first: "docker login" command
 2. Go to https://hub.docker.com/
