@@ -7,7 +7,7 @@ Some useful commands
 14 kubectl delete pod posts
 19 kubectl describe pods posts
 20 kubectl delete deployment posts-depl  
-
+kubectl get services
 
 apiVersions for:
 Pod: v1
@@ -21,7 +21,7 @@ CronJob: batch/v1
 
 
 
-pushing the image to the docker hub:
+Pushing Image to DockerHub
 1: login first: "docker login" command
 2. Go to https://hub.docker.com/
 3. Sign in
