@@ -13,9 +13,11 @@ app.post("/events", async (req, res) => {
   events.push(event);
 
   // from event-bus service
-  await axios.post("http://posts-cluserip-srv/events", event).catch((err) => {
-    console.log(err.message);
-  });
+  await axios
+    .post("http://posts-clusterip-srv:4000/events", event)
+    .catch((err) => {
+      console.log(err.message);
+    });
   await axios
     .post("http://comments-clusterip-srv:4001/events", event)
     .catch((err) => {
